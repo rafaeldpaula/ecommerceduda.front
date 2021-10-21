@@ -1,12 +1,9 @@
-import Home from './Home/Home';
-import './App.css';
+import Home from "./Home/Home";
+import "./App.css";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Checkout from "./Checkout/Checkout";
+import Carrinho from "./Carrinho/Carrinho";
 
 export default function App() {
   return (
@@ -30,8 +27,10 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/checkout">
+            <Checkout />
           </Route>
           <Route path="/carrinho">
+            <Carrinho />
           </Route>
           <Route path="/">
             <Home />
